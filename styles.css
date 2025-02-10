@@ -1,0 +1,274 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #8b0000;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Booking Form - Two Column Layout */
+#frontpage-booking-form {
+    background: #2a2a2a;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 48%; /* Splitting form into two equal columns */
+}
+
+/* Full-width styling for small screens */
+@media screen and (max-width: 600px) {
+    .form-column {
+        width: 100%;
+    }
+}
+
+#frontpage-booking-form label, 
+#frontpage-booking-form input, 
+#frontpage-booking-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+#frontpage-booking-form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Booking Table */
+#frontpage-dashboard {
+    background: #2a2a2a;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+#bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+#bookings-table th, #bookings-table td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: center;
+}
+
+#bookings-table th {
+    background: #8b0000;
+}
+
+#bookings-table tr:nth-child(even) {
+    background: #444;
+}
+
+/* Highlight row on hover */
+#bookings-table tr:hover {
+    background: #666;
+}
+
+/* Search Bar */
+#search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+/* Export Button */
+#export-csv {
+    background: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#export-csv:hover {
+    background: #45a049;
+}
+
+/* Edit & Delete Buttons (Same Styling) */
+.edit-btn, .delete-btn {
+    background: #8b0000;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    color: whitesmoke;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background: #a52a2a;
+}
+
+/* Add Booking Button */
+#submit-button {
+    background: #8b0000;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    background: #a52a2a;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #8b0000;
+    text-align: center;
+}
+
+/* Tooltip Styling */
+.tooltip-container {
+    background: #2a2a2a;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: left;
+    color: white;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.red { background: red; }
+.yellow { background: yellow; }
+.green { background: green; }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #frontpage-dashboard {
+        width: 95%;
+    }
+
+    #bookings-table {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#tournament-mode {
+    margin: 10px;
+    transform: scale(1.2);
+}
